@@ -1,34 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     >
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/smile"
-        android:scaleType="centerCrop"
-        android:tint="#99000000"
-        android:tintMode="src_atop"
-        tools:ignore="UseAppTint"
-        android:contentDescription="Mr. Incredible Smiling" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="36sp"
-        android:layout_margin="28dp"
-        android:textColor="@color/white"
-        android:text="Estoy viendo..."/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="28dp"
-        android:textSize="36sp"
-        android:textColor="@color/white"
-        android:text="Algo bello ;)"/>
-</RelativeLayout>
+
+</LinearLayout>
