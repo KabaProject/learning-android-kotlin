@@ -12,53 +12,30 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun myFunc() {
-        // ARRAY
+        // MAPS (Dictonary)
 
-        val name = "Raquel"
-        val surname = "Sanabria"
-        val company = "Twitter"
-        val age = "21"
-
-        // Creation
-        val raquel: ArrayList<String> = arrayListOf<String>()
+        var tiktok: Map<String, Int> = mapOf() // Inmutable Map
+        println(tiktok) // Empty map
 
         // Add data
-        raquel.add(name)
-        raquel.add(name) // Accept duplicated data
-        raquel.add(surname)
-        raquel.add(company)
-        raquel.add(age)
+        tiktok = mutableMapOf( // Mutable Map
+            "Raquel" to 21,
+            "RealFrogg" to 24,
+            "Aly" to 20
+        )
 
-        // Print
-        println(raquel)
+        // Add value
+        tiktok["Mark"] = 32
+        tiktok.put("Sophie", 10)
+        println(tiktok)
 
-        // Add a list of data
-        raquel.addAll(listOf("Blacked", "Waifu"))
-        raquel.addAll(raquel)
-        println(raquel)
+        // Override value
+        tiktok["Mark"] = 18
+        println(tiktok["Mark"])
 
-        // Data Access
-        println(raquel[0])
-
-        // Modify Data
-        raquel[0] = "Raquel <3"
-        println(raquel[0])
-
-        // Remove Data
-        raquel.removeAt(0)
-        println(raquel)
-
-        // Iteration
-        raquel.forEach{
-            println(it)
-        }
-
-        // OPERATIONS
-        // Array Size
-        println("Raquel length: ${raquel.count()}")
-
-        // Clear Array
-        raquel.clear()
-        println("Raquel length: ${raquel.count()}")
+        // Remove data
+        tiktok.remove("Mark")
+        println(tiktok)
     }
+
 }
