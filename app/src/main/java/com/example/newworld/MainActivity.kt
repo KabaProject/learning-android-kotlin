@@ -12,30 +12,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun myFunc() {
-        // Null Safety
-
-        val user = "KabaProject"
-        // user = null -> posible error
-        println(user)
-
-        var userSafe: String? = "KabaProject" // This string is nullable
-        println(userSafe)
-
-        // Check if it'ms nullable, if not, force it to work as non-null
-        if(userSafe != null){
-            println(userSafe!!) // Throw error if it's null
-        }
-
-        // Safety Call
-        userSafe = null
-        println(userSafe?.length) // It doesn't call the operation if it's null
-
-        userSafe?.let{ // Runs code if isn't null
-            //println(it!!)
-            print("No nulo")
-        } ?: run {
-            println("Es nulo")
-        }
+        sayHello()
+        sayMyName("Raquel")
+        val sum = sumTwoValues(8, 3)
+        println(sum)
     }
 
+    // FUNCTIONS
+    // Simple
+    fun sayHello() {
+        println("Hola!")
+    }
+
+    // With params
+    fun sayMyName(name: String){
+        println("Hola, mi nombre es $name")
+    }
+
+    // Return value
+    fun sumTwoValues(numA: Int, numB: Int): Int {
+        return numA + numB
+    }
 }
