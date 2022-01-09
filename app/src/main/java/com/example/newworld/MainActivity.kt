@@ -8,21 +8,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        variablesYConstantes()
+        myFunc()
     }
 
-    private fun variablesYConstantes() {
-        // Variables
+    private fun myFunc() {
+        // WHEN (SWITCH)
+        val country = "Mexico"
 
-        var myVar= "Hello World"
-        println(myVar)
+        when(country) {
+            "Spain" ->  println("This is Spain")
+            "Canada" -> println("This is Canada")
+            "Mexico" -> println("This is Mexico")
+            else -> println("Where i am?")
+        }
 
-        myVar = 1.toString() // Convert int to string
-        println(myVar)
-
-        // Constants
-
-        val constant = "My Constant" // Cannot be changed
-        println(constant)
     }
 }
