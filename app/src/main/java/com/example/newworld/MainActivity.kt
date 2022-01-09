@@ -12,45 +12,29 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun myFunc() {
-        // LOOPS
+        // Null Safety
 
-        val crushes: List<String> = listOf("Raquel", "Aly", "Ale")
-        val ages: MutableMap<String, Int> = mutableMapOf(
-            "Raquel" to 21,
-            "Aly" to 20,
-            "Ale" to 29
-        )
+        val user = "KabaProject"
+        // user = null -> posible error
+        println(user)
 
-        // FOR
-        for (crush in crushes) {
-            println(crush)
+        var userSafe: String? = "KabaProject" // This string is nullable
+        println(userSafe)
+
+        // Check if it'ms nullable, if not, force it to work as non-null
+        if(userSafe != null){
+            println(userSafe!!) // Throw error if it's null
         }
 
-        for (age in ages){
-            println("${age.key} is ${age.value} years old")
-        }
+        // Safety Call
+        userSafe = null
+        println(userSafe?.length) // It doesn't call the operation if it's null
 
-        for(x in 0..10){
-            println(x)
-        }
-
-        for(x in 0 until 10){ // exclude 10
-            println(x)
-        }
-
-        for(x in 0..10 step 2) println(x)
-        for(x in 0 until 10 step 3) println(x)
-
-        // Numeric Range Array
-        val numArr = (0..20) // IntRange
-        println(numArr)
-
-        // WHILE
-        var x = 0
-
-        while (x < 10) {
-            println(x)
-            x++
+        userSafe?.let{ // Runs code if isn't null
+            //println(it!!)
+            print("No nulo")
+        } ?: run {
+            println("Es nulo")
         }
     }
 
