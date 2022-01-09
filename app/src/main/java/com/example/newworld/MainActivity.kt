@@ -12,30 +12,46 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun myFunc() {
-        // MAPS (Dictonary)
+        // LOOPS
 
-        var tiktok: Map<String, Int> = mapOf() // Inmutable Map
-        println(tiktok) // Empty map
-
-        // Add data
-        tiktok = mutableMapOf( // Mutable Map
+        val crushes: List<String> = listOf("Raquel", "Aly", "Ale")
+        val ages: MutableMap<String, Int> = mutableMapOf(
             "Raquel" to 21,
-            "RealFrogg" to 24,
-            "Aly" to 20
+            "Aly" to 20,
+            "Ale" to 29
         )
 
-        // Add value
-        tiktok["Mark"] = 32
-        tiktok.put("Sophie", 10)
-        println(tiktok)
+        // FOR
+        for (crush in crushes) {
+            println(crush)
+        }
 
-        // Override value
-        tiktok["Mark"] = 18
-        println(tiktok["Mark"])
+        for (age in ages){
+            println("${age.key} is ${age.value} years old")
+        }
 
-        // Remove data
-        tiktok.remove("Mark")
-        println(tiktok)
+        for(x in 0..10){
+            println(x)
+        }
+
+        for(x in 0 until 10){ // exclude 10
+            println(x)
+        }
+
+        for(x in 0..10 step 2) println(x)
+        for(x in 0 until 10 step 3) println(x)
+
+        // Numeric Range Array
+        val numArr = (0..20) // IntRange
+        println(numArr)
+
+        // WHILE
+        var x = 0
+
+        while (x < 10) {
+            println(x)
+            x++
+        }
     }
 
 }
